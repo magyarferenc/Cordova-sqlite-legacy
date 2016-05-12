@@ -1,5 +1,25 @@
 # Changes
 
+## 1.3.1
+
+- Include Windows 10 UWP support (along with Windows 8.1 and Windows Phone 8.1 build)
+- Drop support for WP7 (WP7 was never tested)
+
+## 1.3.0
+
+### cordova-sqlite-storage 1.2.0
+
+- Rename Lawnchair adapter to prevent clash with standard webkit-sqlite adapter
+- Support location: 'default' setting in openDatabase & deleteDatabase
+
+## 0.7.18
+
+### cordova-sqlite-storage 0.8.5
+
+- More explicit iosDatabaseLocation option
+- iOS database location is now mandatory
+- Split-up of some more spec test scripts
+
 ## 0.7.17
 
 ### cordova-sqlite-storage 0.8.2
@@ -9,9 +29,12 @@
 
 ## 0.7.16
 
-- Fix WP(7/8) handling of large (64-bit) INTEGER values
+- Fix WP8 handling of large (64-bit) INTEGER values
 - Separate SQLiteConnectorDatabase class for Android
 - Renamed SQLiteProxy.js to sqlite-proxy.js in Windows version
+
+### cordova-sqlite-storage 0.8.0
+
 - Simple sql batch transaction function
 - Echo test function
 - Remove extra runInBackground: step from iOS version
