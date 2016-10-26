@@ -6,25 +6,17 @@
 
 package io.sqlc;
 
-import android.annotation.SuppressLint;
-
-import android.util.Log;
-
 import java.io.File;
-import java.lang.IllegalArgumentException;
-import java.lang.Number;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.cordova.CallbackContext;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
 import io.liteglue.SQLColumnType;
-import io.liteglue.SQLiteConnector;
 import io.liteglue.SQLiteConnection;
+import io.liteglue.SQLiteConnector;
 import io.liteglue.SQLiteOpenFlags;
 import io.liteglue.SQLiteStatement;
 
@@ -172,9 +164,9 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
                     myStatement.bindNull(i + 1);
                 } else {
                     Object p = paramsAsJson.get(i);
-                    if (p instanceof Float || p instanceof Double) 
+                    if (p instanceof Float || p instanceof Double)
                         myStatement.bindDouble(i + 1, paramsAsJson.getDouble(i));
-                    else if (p instanceof Number) 
+                    else if (p instanceof Number)
                         myStatement.bindLong(i + 1, paramsAsJson.getLong(i));
                     else
                         myStatement.bindTextNativeString(i + 1, paramsAsJson.getString(i));

@@ -6,29 +6,23 @@
 
 package io.sqlc;
 
-import android.annotation.SuppressLint;
+import java.io.File;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.apache.cordova.CallbackContext;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.CursorWindow;
 import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteStatement;
-
-import android.util.Base64;
 import android.util.Log;
-
-import java.io.File;
-import java.lang.IllegalArgumentException;
-import java.lang.Number;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.apache.cordova.CallbackContext;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Android Database helper class
