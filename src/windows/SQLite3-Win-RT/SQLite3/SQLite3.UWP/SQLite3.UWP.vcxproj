@@ -29,7 +29,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{76e68196-b7dc-4393-a070-d32fc33bc489}</ProjectGuid>
     <Keyword>WindowsRuntimeComponent</Keyword>
-    <ProjectName>SQLite3.UWP</ProjectName>
+    <ProjectName>SQLite3Cordova</ProjectName>
     <RootNamespace>SQLite3</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
